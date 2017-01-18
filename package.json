@@ -1,19 +1,20 @@
 {
-  "name": "systemjs-plugin-less",
-  "version": "0.1.2",
-  "main": "less.js",
+  "name": "systemjs-plugin-stylus",
+  "version": "0.1.0",
+  "main": "stylus.js",
   "dependencies": {
-    "less": "^2.7.1",
+    "stylus": "^0.54.5",
     "systemjs-plugin-css": "^0.1.30"
   },
   "jspm": {
+    "configFile": "jspm.config.js",
     "dependencies": {
       "css": "github:systemjs/plugin-css@0.1.30"
     },
     "map": {
-      "lesscss": {
-        "node": "./less-node.js",
-        "browser": "./less-browser.js"
+      "styluscss": {
+        "node": "./stylus-node.js",
+        "browser": "./stylus-browser.js"
       }
     }
   }

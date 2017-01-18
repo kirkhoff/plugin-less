@@ -4,33 +4,7 @@ Installation
 With jspm:
 
 ```
-jspm install less
-```
-
-With native SystemJS:
-
-```
-npm install systemjs-plugin-css systemjs-plugin-less less
-```
-
-```javascript
-SystemJS.config({
-  map: {
-    css: 'node_modules/systemjs-plugin-css',
-    less: 'node_modules/systemjs-plugin-less',
-    lesscss: 'node_modules/less'
-  },
-  packages: {
-    lesscss: {
-      main: {
-        browser: './dist/less.min.js',
-        node: '@node/less'
-      }
-    },
-    css: { main: 'css.js' },
-    less: { main: 'less.js' }
-  }
-});
+jspm install stylus
 ```
 
 Usage
@@ -39,7 +13,7 @@ Usage
 ```javascript
 SystemJS.config({
   meta: {
-    '*.less': { loader: 'less' }
+    '*.styl': { loader: 'stylus' }
   }
 });
 ```
@@ -51,14 +25,14 @@ SystemJS.config({
   packages: {
     'src/': {
       meta: {
-        '*.less': { loader: 'less' }
+        '*.styl': { loader: 'stylus' }
       }
     }
   }
 });
 ```
 
-In-browser LESS transpilation and builds should then be provided for any LESS files.
+In-browser Stylus transpilation and builds should then be provided for any `*.styl` files.
 
 Source maps support is included.
 
